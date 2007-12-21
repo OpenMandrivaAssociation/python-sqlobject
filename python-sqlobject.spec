@@ -8,6 +8,7 @@ URL: http://sqlobject.org/
 Source0: http://cheeseshop.python.org/packages/source/S/SQLObject/SQLObject-%{version}.tar.bz2
 License: LGPL
 Group: Development/Python
+BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildArch: noarch
 BuildRequires: python-devel python-setuptools
 Requires: python
