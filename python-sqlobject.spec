@@ -1,7 +1,7 @@
 Summary: Object-Relational Manager, aka database wrapper for python
 Name: python-sqlobject
-Version: 0.14.1
-Release: %mkrel 2
+Version: 0.15.0
+Release: %mkrel 1
 URL: http://sqlobject.org/
 Source0: http://cheeseshop.python.org/packages/source/S/SQLObject/SQLObject-%{version}.tar.bz2
 License: LGPL
