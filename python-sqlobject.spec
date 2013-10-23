@@ -1,12 +1,11 @@
 Summary: Object-Relational Manager, aka database wrapper for python
 Name: python-sqlobject
-Version: 0.15.0
-Release: %mkrel 1
+Version: 1.3.2
+Release: 1
 URL: http://sqlobject.org/
-Source0: http://cheeseshop.python.org/packages/source/S/SQLObject/SQLObject-%{version}.tar.bz2
+Source0: http://pypi.python.org/packages/source/S/SQLObject/SQLObject-%{version}.tar.gz
 License: LGPL
 Group: Development/Python
-BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildArch: noarch
 BuildRequires: python-devel python-setuptools
 Requires: python
@@ -23,15 +22,12 @@ Emphasizes convenience.  Works with MySQL, PostgreSQL, SQLite, Firebird.
 python setup.py build
 
 %install
-rm -rf $RPM_BUILD_ROOT
-python setup.py install --root $RPM_BUILD_ROOT
-rm -Rf $RPM_BUILD_ROOT/%_bindir/easy_install
+python setup.py install --root %{buildroot}
+rm -Rf %{buildroot}/%_bindir/easy_install
 
 %clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(-,root,root)
 %doc docs
 %{py_puresitedir}/*
 %_bindir/*
@@ -82,4 +78,5 @@ rm -rf $RPM_BUILD_ROOT
 - add python-setuptools, as the setup.py request it
 - rebuild for new python
 - Import python-sqlobject
+
 
